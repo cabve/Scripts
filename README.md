@@ -1,3 +1,3 @@
-# PoSh
+# Scripts
 
-Different PoSh scripts for testing
+Different scripts for testing
