@@ -1,6 +1,7 @@
 <#
-    .DESCRIPTION Get Burp extensions, script for getting usable burp extensions.
+    .DESCRIPTION 
     *Work In Progress*
+    Get Burp extensions, script for getting usable burp extensions.
     Author: caabv
 #>
 
