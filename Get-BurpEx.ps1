@@ -1,4 +1,8 @@
-
+<#
+    Get Burp extensions, script for getting usable burp extensions.
+    *Work In Progress*
+    Author: caabv
+#>
 
 New-Item -ItemType directory -Path 'C:\Temp\Burp'
 
