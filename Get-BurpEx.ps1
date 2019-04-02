@@ -5,6 +5,7 @@
     Author: caabv
 #>
 
+#Implement Test-Path for checking if directory exist
 New-Item -ItemType directory -Path 'C:\Temp\Burp'
 
 Write-Host "Created 'Burp' folder in 'C:\Temp\'" -ForegroundColor Yellow
