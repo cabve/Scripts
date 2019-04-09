@@ -5,10 +5,14 @@
     Author: caabv
 #>
 
-#Implement Test-Path for checking if directory exist
-New-Item -ItemType directory -Path 'C:\Temp\Burp'
-
-Write-Host "Created 'Burp' folder in 'C:\Temp\'" -ForegroundColor Yellow
+$i = 0
+if (Test-Path "C:\Temp\Burp") {
+	Write "C:\Temp\Burp - exist" -ForegroundColor Yellow; $i = 1
+}
+else {
+	New-Item -ItemType directory -Path 'C:\Temp\Burp'
+	Write "Created 'Burp' folder in 'C:\Temp\'" -ForegroundColor Yellow
+}
 
 Invoke-WebRequest -Uri 'https://github.com/albinowax/ActiveScanPlusPlus/archive/master.zip' -OutFile 'C:\TEMP\Burp\ActiveScanPlusPlus.zip'
 
@@ -48,14 +52,14 @@ Invoke-WebRequest -Uri 'https://gitlab.com/technotame/cookie-decrypter/-/archive
 
 Invoke-WebRequest -Uri 'https://github.com/PortSwigger/backslash-powered-scanner/archive/master.zip' -OutFile 'C:\Temp\Burp\backslashPoweredScanner.zip'
 
-Write-Host "Downloaded all extensions - starting to unzip" -ForegroundColor Yellow
+Write "Downloaded all extensions - starting to unzip" -ForegroundColor Yellow
 
 Get-ChildItem 'C:\Temp\Burp\' -Filter *.zip | Expand-Archive -DestinationPath 'C:\Temp\Burp\' -Force
 
-Write-Host "All .zip files unzipped" -ForegroundColor Yellow
+Write "All .zip files unzipped" -ForegroundColor Yellow
 
-Write-Host "Cleaning up" -ForegroundColor Yellow
+Write "Cleaning up" -ForegroundColor Yellow
 
 Remove-Item -Path 'C:\Temp\Burp\*.zip'
 
-Write-Host "Script finished" -ForegroundColor Green
+Write "Script finished" -ForegroundColor Green
