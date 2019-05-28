@@ -1,3 +1,3 @@
-# Scripts
+# Scripts 
 
-Different scripts for testing
+Useful scripts and other "stuff" for testing
