@@ -424,7 +424,7 @@ function Invoke-All{
     Get-ThirdPartyApps
     Get-RegistryPasswords
     #Get-Sysprep
-    #Get-IntFiles
+    Get-IntFiles
     Write-Host "==================================================="
     "`n"
     Write-Host "Script finised successfully" -ForegroundColor Green
